@@ -37,7 +37,7 @@
     "type":"string"
   }]
 }
-let expectedOutput = []
+let expectedOutput = [];
 let expObj = {};
 inputArray.dimensions.forEach((dimElement,dimIndex) => {
     let obj = inputArray['metadata'].find(x => x.id === dimElement.id);
@@ -45,7 +45,7 @@ inputArray.dimensions.forEach((dimElement,dimIndex) => {
         if(dimIndex ==0){
             expectedOutput.push({[obj.label]:ValueElement})
         }else{
-            expectedOutput[valueIndex][obj.label] = ValueElement
+            expectedOutput[valueIndex][obj.label] = ValueElement;
         }
     })
 });
